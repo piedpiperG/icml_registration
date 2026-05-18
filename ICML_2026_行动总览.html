@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 注册、Camera-ready 与韩国签证行动总览</title>
+  <style>
+    :root {
+      --bg: #f7f8f5;
+      --ink: #19201d;
+      --muted: #637067;
+      --line: #dbe0d9;
+      --panel: #ffffff;
+      --panel-2: #edf4ef;
+      --accent: #0c6b58;
+      --accent-2: #a83f2a;
+      --accent-3: #2f5f9d;
+      --gold: #946a13;
+      --shadow: 0 14px 35px rgba(21, 33, 30, 0.08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(237, 244, 239, 0.9), rgba(247, 248, 245, 0.9) 42%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-3);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: #183f78; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 248px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+      padding: 24px 20px;
+      border-right: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 6px;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    nav a {
+      display: block;
+      padding: 8px 10px;
+      margin: 2px 0;
+      color: var(--ink);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      background: var(--panel-2);
+    }
+
+    .side-note {
+      margin-top: 22px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfa;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    main {
+      max-width: 1180px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 32px 56px;
+    }
+
+    .hero {
+      min-height: 360px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 26px;
+      align-items: stretch;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(12, 107, 88, 0.1), rgba(47, 95, 157, 0.08)),
+        #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 18px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button.warn {
+      border-color: rgba(168, 63, 42, 0.26);
+      background: #fff5f2;
+      color: var(--accent-2);
+    }
+
+    .hero-panel {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .hero > *, .grid > *, .flow > *, .step > div:last-child {
+      min-width: 0;
+    }
+
+    .metric {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    section {
+      margin-top: 28px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    p { margin: 0 0 12px; }
+
+    h1, h2, h3, p, strong, td, th, .button, .mini-link {
+      overflow-wrap: anywhere;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 880px;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 16px;
+    }
+
+    .card.highlight {
+      border-color: rgba(12, 107, 88, 0.34);
+      background: #f4faf7;
+    }
+
+    .card.warning {
+      border-color: rgba(168, 63, 42, 0.26);
+      background: #fff8f5;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--panel-2);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .badge.red {
+      background: #fff0ec;
+      color: var(--accent-2);
+    }
+
+    .badge.blue {
+      background: #eef4ff;
+      color: var(--accent-3);
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1;
+      margin: 8px 0 8px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .flow-step {
+      position: relative;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      min-height: 132px;
+    }
+
+    .flow-step .num {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .time-row strong { color: var(--accent); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 14px;
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eff4f1;
+      color: #25312d;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .step-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--accent-3);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fbfcfa;
+      color: var(--accent-3);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .mini-link:hover { background: #eef4ff; }
+
+    .callout {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent-2);
+      background: #fff8f5;
+      border-radius: 6px;
+    }
+
+    .checklist {
+      columns: 2;
+      column-gap: 28px;
+      padding-left: 18px;
+      margin: 12px 0 0;
+    }
+
+    .checklist li {
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding: 22px 4px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .layout { display: block; }
+      aside {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+      }
+      main { padding: 22px 16px 40px; }
+      h1 {
+        font-size: 27px;
+        word-break: break-all;
+      }
+      h2 { font-size: 23px; }
+      section, .hero {
+        width: 100%;
+        max-width: calc(100vw - 32px);
+      }
+      .hero { padding: 22px; }
+      .hero * { word-break: break-all; }
+      .subtitle {
+        font-size: 15px;
+        word-break: break-all;
+      }
+      .metric strong { font-size: 19px; }
+      section, .hero { overflow: hidden; }
+      .price { font-size: 26px; }
+      .hero, .grid.cols-2, .grid.cols-3, .grid.cols-4, .flow {
+        grid-template-columns: 1fr;
+      }
+      .time-row {
+        grid-template-columns: 1fr;
+      }
+      .checklist { columns: 1; }
+    }
+
+    @media print {
+      aside, .hero-actions { display: none; }
+      .layout { display: block; }
+      main { max-width: none; padding: 0; }
+      section, .hero { box-shadow: none; break-inside: avoid; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <img src="https://icml.cc/static/core/img/ICML-logo.svg" alt="ICML logo">
+        <div>
+          <strong>ICML 2026 行动总览</strong>
+          <span>注册 · Camera-ready · 韩国签证</span>
+        </div>
+      </div>
+      <nav aria-label="页面导航">
+        <a href="#decision">主线决策</a>
+        <a href="#timeline">关键时间</a>
+        <a href="#team">5 人注册方案</a>
+        <a href="#camera">Camera-ready</a>
+        <a href="#registration">注册步骤</a>
+        <a href="#visa">韩国签证</a>
+        <a href="#visa-free">免签判断</a>
+        <a href="#links">官方链接</a>
+      </nav>
+      <div class="side-note">
+        更新时间：2026-05-18<br>
+        5 人团队：4 名学生 + 1 名企业人士。<br>
+        目标：cover 1 篇 main conference paper。
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero">
+        <div>
+          <h1>ICML 2026<br>参会与交付<br>一页看清怎么做</h1>
+          <p class="subtitle">
+            主体思路：先定展示形态；<br>再用最低合规注册覆盖论文；<br>随后交最终稿；现场参会者办理韩国签证。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://icml.cc/Register2" target="_blank" rel="noopener">ICML 注册入口</a>
+            <a class="button" href="https://icml.cc/Conferences/2026/AuthorInstructions" target="_blank" rel="noopener">作者说明</a>
+            <a class="button" href="https://icml.cc/Conferences/2026/VisaInformation" target="_blank" rel="noopener">ICML 签证页</a>
+            <a class="button warn" href="#team">查看最低成本方案</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="metric">
+            <span>5 人都现场最低成本</span>
+            <strong>4 学生 + 1 企业 Conference only：$1350 早鸟</strong>
+          </div>
+          <div class="metric">
+            <span>Camera-ready 截止</span>
+            <strong>2026-05-29 19:59:59 上海时间</strong>
+          </div>
+          <div class="metric">
+            <span>$50 票是否能现场进</span>
+            <strong>不能，Virtual Pass 是线上票</strong>
+          </div>
+        </div>
+      </header>
+
+      <section id="decision">
+        <h2>主线决策</h2>
+        <p class="lead">这部分决定后面所有动作：论文展示形态决定最低注册要求，参会方式决定谁需要韩国签证。</p>
+        <div class="flow">
+          <div class="flow-step">
+            <span class="num">1</span>
+            <h3>确认 paper 形态</h3>
+            <p>线下展示还是 proceedings-only；线下展示不能只买 Virtual Pass。</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">2</span>
+            <h3>指定 cover 作者</h3>
+            <p>建议 1 名学生作者现场 cover，成本最低且合规。</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">3</span>
+            <h3>完成注册</h3>
+            <p>线下 cover 者勾选 Conference Sessions；其他人按是否参会决定。</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">4</span>
+            <h3>提交 camera-ready</h3>
+            <p>OpenReview 提交 PDF、PMLR agreement、paper checker code。</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">5</span>
+            <h3>办理签证</h3>
+            <p>只有线下去首尔的人需要签证；ICML 注册不是韩国免签。</p>
+          </div>
+        </div>
+        <div class="link-row">
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/AuthorInstructions" target="_blank" rel="noopener">Author Instructions</a>
+          <a class="mini-link" href="https://icml.cc/FAQ/Author-Registration" target="_blank" rel="noopener">Author Registration FAQ</a>
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/Pricing" target="_blank" rel="noopener">Pricing</a>
+        </div>
+      </section>
+
+      <section id="timeline">
+        <h2>关键时间</h2>
+        <div class="timeline">
+          <div class="time-row">
+            <strong>2026-05-19 19:59 上海</strong>
+            <span>Financial Aid / Volunteer 申请约到期，结果不是确定性折扣。</span>
+            <a href="https://icml.cc/Conferences/2026/FinancialAid" target="_blank" rel="noopener">Financial Aid</a>
+          </div>
+          <div class="time-row">
+            <strong>2026-05-25 19:59 上海</strong>
+            <span>早鸟价按 AOE/UTC 换算约到期；下单以注册页实时显示为准，不建议卡最后一小时。</span>
+            <a href="https://icml.cc/Conferences/2026/Dates" target="_blank" rel="noopener">Dates</a>
+          </div>
+          <div class="time-row">
+            <strong>2026-05-29 19:59 上海</strong>
+            <span>Camera-ready 截止。PDF、PMLR agreement、paper checker code 都要完成。</span>
+            <a href="https://icml.cc/Conferences/2026/AuthorInstructions" target="_blank" rel="noopener">Author Instructions</a>
+          </div>
+          <div class="time-row">
+            <strong>2026-06-15 19:59 上海</strong>
+            <span>普通取消注册截止。签证扩展退款政策另有条件，且 2026-04-07 签证申请节点已过。</span>
+            <a href="https://icml.cc/Conferences/2026/Pricing" target="_blank" rel="noopener">Cancellation</a>
+          </div>
+          <div class="time-row">
+            <strong>2026-07-06 至 07-11</strong>
+            <span>ICML 2026 在韩国首尔 COEX 举办。</span>
+            <a href="https://icml.cc/Conferences/2026" target="_blank" rel="noopener">Conference</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <h2>5 人注册方案</h2>
+        <p class="lead">你们有 4 名学生和 1 名企业人士，并且 5 人都去现场。最低合规方案是每个人只买 Conference Sessions，不买 Tutorials / Workshops。$50 的 Student Virtual Pass 只能线上访问，不能现场入场。</p>
+        <div class="grid cols-3">
+          <div class="card highlight">
+            <span class="badge">推荐：5 人都现场</span>
+            <h3>4 学生 + 1 企业，只买 Conference</h3>
+            <div class="price">$1350</div>
+            <p>4 名学生各买 Student + Conference Sessions only；1 名企业人士买 Industrial + Conference Sessions only。</p>
+            <p class="muted">晚价 $1630。可现场参加 main conference，并可 cover 论文。</p>
+          </div>
+          <div class="card">
+            <span class="badge blue">只 cover 论文</span>
+            <h3>只有 1 名学生作者现场</h3>
+            <div class="price">$200</div>
+            <p>1 名学生作者买 Student + Conference Sessions only，其他 4 人不现场参会。</p>
+            <p class="muted">晚价 $245。只适合 1 人现场 cover paper。</p>
+          </div>
+          <div class="card warning">
+            <span class="badge red">$50 票限制</span>
+            <h3>Virtual Pass 不能现场入场</h3>
+            <div class="price">$50</div>
+            <p>Student Virtual Pass 是 virtual-only access，只包含直播和 Rocket Chat。</p>
+            <p class="muted">现场进入 main conference 需要 Conference Sessions 注册。</p>
+          </div>
+        </div>
+        <table aria-label="常用价格表">
+          <thead>
+            <tr>
+              <th>身份</th>
+              <th>Virtual Pass</th>
+              <th>Conference only</th>
+              <th>Tutorials + Conference + Workshops</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Student</td>
+              <td>$50 / $50</td>
+              <td>$200 / $245</td>
+              <td>$425 / $540</td>
+            </tr>
+            <tr>
+              <td>Academic</td>
+              <td>$200 / $200</td>
+              <td>$450 / $500</td>
+              <td>$900 / $1030</td>
+            </tr>
+            <tr>
+              <td>Industrial</td>
+              <td>$275 / $275</td>
+              <td>$550 / $650</td>
+              <td>$1150 / $1365</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout">
+          <strong>判断口径：</strong>如果 5 人都要进入现场 main conference，就不能用 $50 Virtual Pass 替代。Virtual Pass 适合只线上观看；现场入场最低是对应身份的 Conference only。
+        </div>
+        <div class="link-row">
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/Pricing" target="_blank" rel="noopener">官方 Pricing</a>
+          <a class="mini-link" href="https://icml.cc/Register2" target="_blank" rel="noopener">Registration 2026</a>
+          <a class="mini-link" href="https://icml.cc/FAQ/Author-Registration" target="_blank" rel="noopener">作者注册规则</a>
+        </div>
+      </section>
+
+      <section id="camera">
+        <h2>Camera-ready 提交流程</h2>
+        <p class="lead">目标是在 OpenReview 完成最终版本提交，同时满足 ICML/PMLR 的格式、协议和 consent 要求。</p>
+        <div class="step-list">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h3>确认展示形态和注册覆盖</h3>
+              <p>线下展示 paper 需要至少 1 名作者注册 Conference；proceedings-only 需要 Conference 或 Virtual Pass。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://icml.cc/Conferences/2026/AuthorInstructions" target="_blank" rel="noopener">Author Instructions</a>
+                <a class="mini-link" href="https://icml.cc/FAQ/Author-Registration" target="_blank" rel="noopener">Author Registration FAQ</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h3>编译最终 PDF</h3>
+              <p>使用 ICML 2026 style file，LaTeX 使用 <code>\usepackage[accepted]{icml2026}</code>；US letter；PDF 不超过 20MB；正文最多 9 页。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://icml.cc/Conferences/2026/AuthorInstructions" target="_blank" rel="noopener">格式要求</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h3>跑 paper checker</h3>
+              <p>上传最终 PDF，获取 5-letter submission code；任何 PDF 修改后都要重新跑。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://papercheck.icml.cc/papercheck.html" target="_blank" rel="noopener">Paper Checker</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h3>签署协议与 consent forms</h3>
+              <p>对应作者签 PMLR Publication Agreement；至少一名作者在 ICML 签 Publishing Release；oral 还需 Recording Release。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://proceedings.mlr.press/pmlr-license-agreement.html" target="_blank" rel="noopener">PMLR Agreement</a>
+                <a class="mini-link" href="https://icml.cc/ConsentForm" target="_blank" rel="noopener">ICML Consent Form</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div>
+              <h3>在 OpenReview 提交</h3>
+              <p>进入 Author Console，找到 paper 的 camera-ready form，上传 PDF 和 agreement，填写 title、abstract、lay summary、paper checker code。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://openreview.net" target="_blank" rel="noopener">OpenReview</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="registration">
+        <h2>注册步骤</h2>
+        <p class="lead">只勾选真正需要的 sessions。为了 cover 线下 paper，不需要买 Tutorials 或 Workshops。</p>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>cover 线下 paper 的学生作者</h3>
+            <ul>
+              <li>身份选择：Full time student。</li>
+              <li>Sessions：勾选 Conference Sessions。</li>
+              <li>上传学生证，现场 check-in 时带学生证。</li>
+              <li>支付后保存 receipt、QR code、注册确认邮件。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>其他成员</h3>
+            <ul>
+              <li>只线上观看：买 Virtual Pass，不能现场入场。</li>
+              <li>线下参会：按学生/企业身份购买对应 in-person registration。</li>
+              <li>企业人士如果由公司或非学术机构报销，应选 Industrial。</li>
+              <li>不参会且不需要访问权限：无需注册。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="link-row">
+          <a class="mini-link" href="https://icml.cc/Register2" target="_blank" rel="noopener">注册入口</a>
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/Pricing" target="_blank" rel="noopener">价格计算</a>
+          <a class="mini-link" href="https://icml.cc/FAQ/CancelRegistration" target="_blank" rel="noopener">取消说明</a>
+          <a class="mini-link" href="https://icml.cc/FAQ/TransferRegistration" target="_blank" rel="noopener">不可转让政策</a>
+        </div>
+      </section>
+
+      <section id="visa">
+        <h2>韩国签证路径</h2>
+        <p class="lead">中国大陆普通护照去首尔参加 ICML，通常按短期一般 C-3-1（参加活动或会议）准备。最终以本人所属领区签证中心为准。</p>
+        <div class="step-list">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h3>先买 ICML 线下注册</h3>
+              <p>ICML visa invitation letter 的前置条件是 in-person registration。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://icml.cc/Register2" target="_blank" rel="noopener">Registration</a>
+                <a class="mini-link" href="https://icml.cc/Conferences/2026/VisaInformation" target="_blank" rel="noopener">Visa Information</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h3>生成 ICML visa letter</h3>
+              <p>从 ICML 官网生成，不通过 booking agency。签证表中的韩国联系人用邀请函上的 ICML 联系信息。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://icml.cc/Conferences/2026/VisaInformation" target="_blank" rel="noopener">ICML 签证页</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h3>判断领区并预约递签</h3>
+              <p>原则上按户籍地；如可证明在某领区居住 3 个月以上，可按居住地领区。上海领区为上海、安徽、江苏、浙江。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://www.visaforkorea-sh.com" target="_blank" rel="noopener">上海签证中心</a>
+                <a class="mini-link" href="https://www.visaforkorea-sh.com/visacenter/booking/insert" target="_blank" rel="noopener">上海预约申请</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h3>准备 C-3-1 会议材料</h3>
+              <p>基础材料：申请表、照片、护照、身份证。补强材料：ICML 邀请函、注册收据、接收通知、行程酒店、在读/在职、资金证明等。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://chn.mofa.go.kr/cn-zh/brd/m_1201/view.do?page=1&seq=695439" target="_blank" rel="noopener">韩国驻华使馆材料清单</a>
+                <a class="mini-link" href="https://overseas.mofa.go.kr/cn-zh/brd/m_23455/list.do" target="_blank" rel="noopener">签证申请程序</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div>
+              <h3>查结果并做入境登记</h3>
+              <p>用 Korea Visa Portal 查询签证结果；出发前 3 天内填写 e-Arrival Card。</p>
+              <div class="link-row">
+                <a class="mini-link" href="https://www.visa.go.kr/openPage.do?MENU_ID=10301" target="_blank" rel="noopener">Visa Portal 查询</a>
+                <a class="mini-link" href="https://www.e-arrivalcard.go.kr/portal/main/index.do?locale=EN" target="_blank" rel="noopener">e-Arrival Card</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>材料冲突提醒：</strong>韩国 C-3-1 清单可能要求韩方事业者登录证/固有代码证；ICML 官方说明它是美国非营利组织，不能提供韩国 Business Registration Certificate。递签前建议把 ICML 签证页说明、邀请函、注册收据、接收通知一起放入申请包，并向签证中心确认口径。
+        </div>
+      </section>
+
+      <section id="visa-free">
+        <h2>多人成团免签判断</h2>
+        <div class="grid cols-2">
+          <div class="card warning">
+            <span class="badge red">结论</span>
+            <h3>ICML 多人注册不等于免签</h3>
+            <p>韩国入境许可由韩国移民/签证规则决定。多人一起注册、一起出行、同一篇论文作者团队，都不会自动免签。</p>
+          </div>
+          <div class="card">
+            <span class="badge blue">查到的政策</span>
+            <h3>中国团体游客临时免签</h3>
+            <p>适用期 2025-09-29 至 2026-06-30；对象为指定旅行社募集的 3 人以上中国团体游客；停留 15 日内。</p>
+          </div>
+        </div>
+        <table aria-label="免签路径适用性">
+          <thead>
+            <tr>
+              <th>免签路径</th>
+              <th>为什么不适合 ICML</th>
+              <th>官方入口</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>中国团体游客临时免签</td>
+              <td>旅游团政策；结束日 2026-06-30 早于 ICML；真实目的为参加会议，不应按旅游团申报。</td>
+              <td><a href="https://www.moj.go.kr/moj/221/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgyJTJGNTk4NjEwJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmJic0NsU2VxJTNEJTI2cmdzRW5kZGVTdHIlM0QlMjZpc1ZpZXdNaW5lJTNEZmFsc2UlMjZwYWdlJTNEMSUyNmJic09wZW5XcmRTZXElM0QlMjZzcmNoQ29sdW1uJTNEJTI2c3JjaFdyZCUzRCUyNg%3D%3D" target="_blank" rel="noopener">韩国法务部</a></td>
+            </tr>
+            <tr>
+              <td>济州免签</td>
+              <td>ICML 在首尔 COEX，不在济州；济州免签不能直接覆盖首尔参会。</td>
+              <td><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1208/list.do" target="_blank" rel="noopener">韩国驻华使馆免签介绍</a></td>
+            </tr>
+            <tr>
+              <td>过境免签</td>
+              <td>适合去第三国过境；ICML 的目的地就是韩国首尔。</td>
+              <td><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1208/list.do" target="_blank" rel="noopener">韩国驻华使馆免签介绍</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="materials">
+        <h2>本地材料包</h2>
+        <p class="lead">下面这些文件已经在同一目录里，适合内部转发或继续补充。</p>
+        <ul class="checklist">
+          <li><a href="ICML_2026_注册规则.md">ICML_2026_注册规则.md</a></li>
+          <li><a href="ICML_2026_camera_ready提交流程.md">ICML_2026_camera_ready提交流程.md</a></li>
+          <li><a href="ICML_2026_五人注册省钱方案.md">ICML_2026_五人注册省钱方案.md</a></li>
+          <li><a href="ICML_2026_韩国签证办理路径.md">ICML_2026_韩国签证办理路径.md</a></li>
+          <li><a href="ICML_2026_多人免签结论.md">ICML_2026_多人免签结论.md</a></li>
+          <li><a href="韩国签证种类及所需材料_260428.pdf">韩国签证种类及所需材料_260428.pdf</a></li>
+          <li><a href="韩国签证申请及签发程序_260313.pdf">韩国签证申请及签发程序_260313.pdf</a></li>
+          <li><a href="中国团体游客临时免签计划_MOJ_20250908.pdf">中国团体游客临时免签计划_MOJ_20250908.pdf</a></li>
+        </ul>
+      </section>
+
+      <section id="links">
+        <h2>官方链接索引</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>ICML</h3>
+            <p><a href="https://icml.cc/Conferences/2026/AuthorInstructions" target="_blank" rel="noopener">Author Instructions</a></p>
+            <p><a href="https://icml.cc/Conferences/2026/Pricing" target="_blank" rel="noopener">Pricing</a></p>
+            <p><a href="https://icml.cc/Register2" target="_blank" rel="noopener">Registration 2026</a></p>
+            <p><a href="https://icml.cc/Conferences/2026/VisaInformation" target="_blank" rel="noopener">Visa Information</a></p>
+          </div>
+          <div class="card">
+            <h3>Camera-ready</h3>
+            <p><a href="https://openreview.net" target="_blank" rel="noopener">OpenReview</a></p>
+            <p><a href="https://papercheck.icml.cc/papercheck.html" target="_blank" rel="noopener">ICML Paper Checker</a></p>
+            <p><a href="https://proceedings.mlr.press/pmlr-license-agreement.html" target="_blank" rel="noopener">PMLR Publication Agreement</a></p>
+            <p><a href="https://icml.cc/ConsentForm" target="_blank" rel="noopener">ICML Consent Form</a></p>
+          </div>
+          <div class="card">
+            <h3>韩国签证</h3>
+            <p><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1201/view.do?page=1&seq=695439" target="_blank" rel="noopener">签证种类及所需材料</a></p>
+            <p><a href="https://overseas.mofa.go.kr/cn-zh/brd/m_23455/list.do" target="_blank" rel="noopener">签证申请程序</a></p>
+            <p><a href="https://www.visaforkorea-sh.com" target="_blank" rel="noopener">上海韩国签证申请中心</a></p>
+            <p><a href="https://www.visa.go.kr/openPage.do?MENU_ID=10301" target="_blank" rel="noopener">Korea Visa Portal 查询</a></p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        本页用于团队内部执行参考；签证与注册规则可能更新，下单或递签前以对应官方页面的最新显示为准。
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
