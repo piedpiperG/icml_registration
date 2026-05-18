@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ICML 2026 注册、Camera-ready 与韩国签证行动总览</title>
+  <title>ICML 2026 注册、Camera-ready、韩国签证与行程总览</title>
   <style>
     :root {
       --bg: #f7f8f5;
@@ -215,6 +215,8 @@
       margin-top: 4px;
       font-size: 22px;
       line-height: 1.2;
+      overflow-wrap: anywhere;
+      word-break: normal;
     }
 
     section {
@@ -366,6 +368,7 @@
 
     table {
       width: 100%;
+      table-layout: fixed;
       border-collapse: collapse;
       margin-top: 14px;
       font-size: 14px;
@@ -378,6 +381,7 @@
       border-bottom: 1px solid var(--line);
       text-align: left;
       vertical-align: top;
+      overflow-wrap: anywhere;
     }
 
     th {
@@ -497,6 +501,57 @@
       }
       .metric strong { font-size: 19px; }
       section, .hero { overflow: hidden; }
+      main, aside, section, .hero, .card, .flow-step, .time-row, .metric, .link-row {
+        min-width: 0;
+        max-width: 100%;
+      }
+      section p, section li, .lead {
+        overflow-wrap: anywhere;
+        word-break: break-all;
+      }
+      td, th {
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
+      table { font-size: 13px; }
+      th, td { padding: 8px; }
+      table, thead, tbody, tr, th, td {
+        display: block;
+      }
+      thead {
+        height: 0;
+        overflow: hidden;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      tr {
+        margin-bottom: 10px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        overflow: hidden;
+      }
+      td {
+        display: grid;
+        grid-template-columns: 74px minmax(0, 1fr);
+        gap: 10px;
+      }
+      td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        word-break: keep-all;
+      }
+      tr:last-child td { border-bottom: 1px solid var(--line); }
+      tr td:last-child { border-bottom: 0; }
+      .mini-link {
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.35;
+      }
       .price { font-size: 26px; }
       .hero, .grid.cols-2, .grid.cols-3, .grid.cols-4, .flow {
         grid-template-columns: 1fr;
@@ -529,6 +584,10 @@
       <nav aria-label="页面导航">
         <a href="#decision">主线决策</a>
         <a href="#timeline">关键时间</a>
+        <a href="#itinerary">日程规划</a>
+        <a href="#seoul">首尔游玩</a>
+        <a href="#jeju-route">首尔济州交通</a>
+        <a href="#jeju">济州岛方案</a>
         <a href="#team">5 人注册方案</a>
         <a href="#camera">Camera-ready</a>
         <a href="#registration">注册步骤</a>
@@ -546,7 +605,7 @@
     <main>
       <header class="hero">
         <div>
-          <h1>ICML 2026<br>参会与交付<br>一页看清怎么做</h1>
+          <h1>ICML 2026<br>参会交付和行程<br>一页看清怎么做</h1>
           <p class="subtitle">
             主体思路：先定展示形态；<br>再用最低合规注册覆盖论文；<br>随后交最终稿；现场参会者办理韩国签证。
           </p>
@@ -560,15 +619,15 @@
         <div class="hero-panel">
           <div class="metric">
             <span>5 人都现场最低成本</span>
-            <strong>4 学生 + 1 企业 Conference only：$1350 早鸟</strong>
+            <strong>早鸟 $1350：4 学生 + 1 企业</strong>
           </div>
           <div class="metric">
             <span>Camera-ready 截止</span>
             <strong>2026-05-29 19:59:59 上海时间</strong>
           </div>
           <div class="metric">
-            <span>$50 票是否能现场进</span>
-            <strong>不能，Virtual Pass 是线上票</strong>
+            <span>推荐旅行骨架</span>
+            <strong>7/7-7/9 参会，7/10-7/12 济州</strong>
           </div>
         </div>
       </header>
@@ -641,6 +700,180 @@
         </div>
       </section>
 
+      <section id="itinerary">
+        <h2>日程规划</h2>
+        <p class="lead">按“不参加 workshops，只参加 main conference”的假设，5 人都现场时只需要买 Conference Sessions；7/10-7/11 可让给济州或首尔自由行。</p>
+        <div class="grid cols-2">
+          <div class="card highlight">
+            <span class="badge">推荐方案</span>
+            <h3>主会 + 济州 2 晚</h3>
+            <table aria-label="推荐日程表">
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>安排</th>
+                  <th>备注</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="日期">7/5 或 7/6</td>
+                  <td data-label="安排">抵达首尔，住 COEX / 三成 / 宣陵一带</td>
+                  <td data-label="备注">7/6 是 Tutorial/Expo Day；不买 Tutorials 时，建议用来报到、适应时差、会场踩点和短线轻游。</td>
+                </tr>
+                <tr>
+                  <td data-label="日期">7/7-7/9</td>
+                  <td data-label="安排">ICML Main Conference</td>
+                  <td data-label="备注">论文展示、poster/session、人脉交流优先；晚上只安排 COEX 周边或短距离路线。</td>
+                </tr>
+                <tr>
+                  <td data-label="日期">7/10</td>
+                  <td data-label="安排">早上/中午从 Gimpo 飞 Jeju</td>
+                  <td data-label="备注">不参加 workshops；把 Friday 让给济州东线或西线。</td>
+                </tr>
+                <tr>
+                  <td data-label="日期">7/11</td>
+                  <td data-label="安排">济州整天</td>
+                  <td data-label="备注">优先东线 Udo + Seongsan；体力组可改 Hallasan/oreum 徒步线。</td>
+                </tr>
+                <tr>
+                  <td data-label="日期">7/12 或 7/13</td>
+                  <td data-label="安排">济州回首尔 / 直接衔接国际航班</td>
+                  <td data-label="备注">若国际航班从 Incheon 起飞，建议前一晚回首尔，至少留足半天转场缓冲。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <span class="badge blue">保守方案</span>
+            <h3>只留首尔，不去济州</h3>
+            <p>如果签证/机票/预算压力较大，7/10-7/11 可以留在首尔：一天传统文化线，一天汉江/购物/博物馆线。这样不用增加国内航班和岛上交通复杂度。</p>
+            <ul>
+              <li>7/10：景福宫、北村韩屋村、仁寺洞、明洞。</li>
+              <li>7/11：国立中央博物馆、汉江、圣水洞、弘大或梨泰院。</li>
+              <li>适合：第一次去韩国、想降低转场风险的团队。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>注册口径：</strong>Conference Sessions 覆盖 7/7-7/9 main conference；如果不参加 workshops，就不要买 Workshops。7/6 tutorials/expo 是否值得买，取决于你们是否想听教程或参加 expo talks，不是 cover paper 的必要条件。
+        </div>
+        <div class="link-row">
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/index.html" target="_blank" rel="noopener">ICML 2026 Overview</a>
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/Dates" target="_blank" rel="noopener">ICML Dates</a>
+          <a class="mini-link" href="https://icml.cc/Conferences/2026/Pricing" target="_blank" rel="noopener">Registration Pricing</a>
+        </div>
+      </section>
+
+      <section id="seoul">
+        <h2>首尔游玩建议</h2>
+        <p class="lead">ICML 会场在 COEX，适合把“近距离轻游”放在参会日晚上，把“传统文化线”放到会前或会后完整半天。</p>
+        <div class="grid cols-3">
+          <div class="card">
+            <span class="badge">会场附近</span>
+            <h3>COEX / Starfield Library / 奉恩寺</h3>
+            <p>适合 7/7-7/9 参会后的晚上，不用长距离移动。COEX Mall、Starfield Library 和奉恩寺都在会场周边。</p>
+            <div class="link-row">
+              <a class="mini-link" href="https://visit.seoul.kr/en/places/coex-mall" target="_blank" rel="noopener">COEX Mall</a>
+              <a class="mini-link" href="https://english.visitseoul.net/AboutSeoul" target="_blank" rel="noopener">Visit Seoul</a>
+            </div>
+          </div>
+          <div class="card">
+            <span class="badge">经典首尔</span>
+            <h3>景福宫 + 北村韩屋村 + 仁寺洞</h3>
+            <p>适合会前 7/6 或会后 7/10 的半天到一天。北村位于景福宫、昌德宫、宗庙之间，适合步行串联。</p>
+            <div class="link-row">
+              <a class="mini-link" href="https://english.visitkorea.or.kr/svc/contents/rmsCsulView.do?menuSn=958&vcontsId=219716" target="_blank" rel="noopener">Gyeongbokgung</a>
+              <a class="mini-link" href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=351&vcontsId=97932" target="_blank" rel="noopener">Bukchon</a>
+              <a class="mini-link" href="https://english.seoul.go.kr/service/amusement/traditional-culture/hanok-village-walking-tour-map/" target="_blank" rel="noopener">Hanok Walking Map</a>
+            </div>
+          </div>
+          <div class="card">
+            <span class="badge">夜间/年轻线</span>
+            <h3>汉江 + 圣水洞 / 弘大 / 明洞</h3>
+            <p>参会日晚间轻松安排：汉江散步，圣水洞咖啡和买手店，弘大夜生活，明洞购物和街头小吃。</p>
+            <div class="link-row">
+              <a class="mini-link" href="https://english.seoul.go.kr/service/amusement/hangang/hangang-parks/" target="_blank" rel="noopener">Hangang Parks</a>
+              <a class="mini-link" href="https://english.visitseoul.net/AboutSeoul" target="_blank" rel="noopener">Seoul Official Guide</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="jeju-route">
+        <h2>首尔与济州岛交通</h2>
+        <p class="lead">最推荐飞机：首尔 Gimpo Airport（GMP）到 Jeju Airport（CJU）。航班很多，实际班次和价格以航空公司与 Korea Airports Corporation 实时信息为准。</p>
+        <div class="grid cols-3">
+          <div class="card highlight">
+            <span class="badge">推荐</span>
+            <h3>Gimpo 到 Jeju 飞机</h3>
+            <p>从首尔市内去 Gimpo 比去 Incheon 更方便；GMP-CJU 是韩国国内核心航线，适合 7/10 早上或中午出发。</p>
+            <ul>
+              <li>COEX 到 Gimpo：按 60-90 分钟预估，早高峰和大件行李要再留缓冲。</li>
+              <li>飞行时间：通常约 1 小时多，具体以航班显示为准。</li>
+              <li>建议：提前买可退改国内票，避免 poster/session 或天气变化打乱计划。</li>
+            </ul>
+            <div class="link-row">
+              <a class="mini-link" href="https://www.airport.co.kr/gimpoeng/cms/frCon/index.do?MENU_ID=0200" target="_blank" rel="noopener">Gimpo Flight Info</a>
+              <a class="mini-link" href="https://www.airport.co.kr/wwweng/index.do" target="_blank" rel="noopener">Korea Airports Corp</a>
+            </div>
+          </div>
+          <div class="card">
+            <span class="badge blue">回国衔接</span>
+            <h3>Jeju 回 Seoul 再去 Incheon</h3>
+            <p>如果国际航班从 Incheon 起飞，不建议把 Jeju-CJU 到 Seoul-GMP 的航班压得太晚。济州天气、国内航班延误、Gimpo 到 Incheon 转场都要留时间。</p>
+            <ul>
+              <li>稳妥：7/12 晚回首尔，7/13 从 Incheon 回国。</li>
+              <li>激进：7/12 同日转机，至少留半天以上缓冲。</li>
+            </ul>
+          </div>
+          <div class="card warning">
+            <span class="badge red">不推荐</span>
+            <h3>船/复杂陆海联运</h3>
+            <p>除非特别想体验 ferry 或自驾上岛，否则首尔到济州用船会显著增加时间和复杂度，不适合 ICML 后 2-3 天短途旅行。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="jeju">
+        <h2>济州岛游玩方案</h2>
+        <p class="lead">济州适合自然风光。2 晚 3 天建议不要把东西南北全塞满，优先选“东线 + 西归浦”或“轻松环岛局部线”。5 人同行可以考虑租车/包车，效率会明显高于公交。</p>
+        <div class="grid cols-3">
+          <div class="card highlight">
+            <span class="badge">2 晚 3 天推荐</span>
+            <h3>东线 + Udo + Seongsan</h3>
+            <p>Day 1 到达后住济州市或 Seongsan；Day 2 早起 Seongsan Ilchulbong，再看 Udo；Day 3 视返程去西归浦瀑布/海岸或咖啡馆。</p>
+            <div class="link-row">
+              <a class="mini-link" href="https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264207" target="_blank" rel="noopener">Seongsan - VisitKorea</a>
+              <a class="mini-link" href="https://www.visitjeju.net/en/detail/view?contentsid=CONT_000000000500349" target="_blank" rel="noopener">VisitJeju Seongsan</a>
+              <a class="mini-link" href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=69991" target="_blank" rel="noopener">Udo / Udobong</a>
+            </div>
+          </div>
+          <div class="card">
+            <span class="badge blue">自然强度高</span>
+            <h3>Hallasan / Oreum 徒步线</h3>
+            <p>适合体力好、愿意把一天给徒步的人。Hallasan 是济州核心自然地标，但路线和预约/天气要提前核对。</p>
+            <div class="link-row">
+              <a class="mini-link" href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=110937" target="_blank" rel="noopener">Hallasan</a>
+              <a class="mini-link" href="https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=90632" target="_blank" rel="noopener">Darangswi Oreum</a>
+            </div>
+          </div>
+          <div class="card">
+            <span class="badge blue">轻松拍照</span>
+            <h3>西线海岸 + 茶园 / 咖啡</h3>
+            <p>适合不想爬山的团队：海岸公路、涯月咖啡、O'sulloc 茶园、山房山/龙头海岸一带按天气选择。</p>
+            <div class="link-row">
+              <a class="mini-link" href="https://www.osulloc.com/kr/zh/museum/map/spot02" target="_blank" rel="noopener">O'sulloc Tea Museum</a>
+              <a class="mini-link" href="https://www.visitjeju.net/en" target="_blank" rel="noopener">VisitJeju</a>
+              <a class="mini-link" href="https://english.visitkorea.or.kr/enu/TRV/TV_ENG_Must100.jsp" target="_blank" rel="noopener">VisitKorea Must 100</a>
+            </div>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>实用建议：</strong>济州公共交通覆盖广但耗时，5 人同走一条路线时，租车/包车通常更省时间。7 月是暑期与雨季/台风前期，机票、住宿和户外路线都建议留可调整空间。
+        </div>
+      </section>
+
       <section id="team">
         <h2>5 人注册方案</h2>
         <p class="lead">你们有 4 名学生和 1 名企业人士，并且 5 人都去现场。最低合规方案是每个人只买 Conference Sessions，不买 Tutorials / Workshops。$50 的 Student Virtual Pass 只能线上访问，不能现场入场。</p>
@@ -678,22 +911,22 @@
           </thead>
           <tbody>
             <tr>
-              <td>Student</td>
-              <td>$50 / $50</td>
-              <td>$200 / $245</td>
-              <td>$425 / $540</td>
+              <td data-label="身份">Student</td>
+              <td data-label="Virtual Pass">$50 / $50</td>
+              <td data-label="Conference only">$200 / $245</td>
+              <td data-label="Tutorials + Conference + Workshops">$425 / $540</td>
             </tr>
             <tr>
-              <td>Academic</td>
-              <td>$200 / $200</td>
-              <td>$450 / $500</td>
-              <td>$900 / $1030</td>
+              <td data-label="身份">Academic</td>
+              <td data-label="Virtual Pass">$200 / $200</td>
+              <td data-label="Conference only">$450 / $500</td>
+              <td data-label="Tutorials + Conference + Workshops">$900 / $1030</td>
             </tr>
             <tr>
-              <td>Industrial</td>
-              <td>$275 / $275</td>
-              <td>$550 / $650</td>
-              <td>$1150 / $1365</td>
+              <td data-label="身份">Industrial</td>
+              <td data-label="Virtual Pass">$275 / $275</td>
+              <td data-label="Conference only">$550 / $650</td>
+              <td data-label="Tutorials + Conference + Workshops">$1150 / $1365</td>
             </tr>
           </tbody>
         </table>
@@ -885,19 +1118,19 @@
           </thead>
           <tbody>
             <tr>
-              <td>中国团体游客临时免签</td>
-              <td>旅游团政策；结束日 2026-06-30 早于 ICML；真实目的为参加会议，不应按旅游团申报。</td>
-              <td><a href="https://www.moj.go.kr/moj/221/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgyJTJGNTk4NjEwJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmJic0NsU2VxJTNEJTI2cmdzRW5kZGVTdHIlM0QlMjZpc1ZpZXdNaW5lJTNEZmFsc2UlMjZwYWdlJTNEMSUyNmJic09wZW5XcmRTZXElM0QlMjZzcmNoQ29sdW1uJTNEJTI2c3JjaFdyZCUzRCUyNg%3D%3D" target="_blank" rel="noopener">韩国法务部</a></td>
+              <td data-label="免签路径">中国团体游客临时免签</td>
+              <td data-label="为什么不适合 ICML">旅游团政策；结束日 2026-06-30 早于 ICML；真实目的为参加会议，不应按旅游团申报。</td>
+              <td data-label="官方入口"><a href="https://www.moj.go.kr/moj/221/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgyJTJGNTk4NjEwJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmJic0NsU2VxJTNEJTI2cmdzRW5kZGVTdHIlM0QlMjZpc1ZpZXdNaW5lJTNEZmFsc2UlMjZwYWdlJTNEMSUyNmJic09wZW5XcmRTZXElM0QlMjZzcmNoQ29sdW1uJTNEJTI2c3JjaFdyZCUzRCUyNg%3D%3D" target="_blank" rel="noopener">韩国法务部</a></td>
             </tr>
             <tr>
-              <td>济州免签</td>
-              <td>ICML 在首尔 COEX，不在济州；济州免签不能直接覆盖首尔参会。</td>
-              <td><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1208/list.do" target="_blank" rel="noopener">韩国驻华使馆免签介绍</a></td>
+              <td data-label="免签路径">济州免签</td>
+              <td data-label="为什么不适合 ICML">ICML 在首尔 COEX，不在济州；济州免签不能直接覆盖首尔参会。</td>
+              <td data-label="官方入口"><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1208/list.do" target="_blank" rel="noopener">韩国驻华使馆免签介绍</a></td>
             </tr>
             <tr>
-              <td>过境免签</td>
-              <td>适合去第三国过境；ICML 的目的地就是韩国首尔。</td>
-              <td><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1208/list.do" target="_blank" rel="noopener">韩国驻华使馆免签介绍</a></td>
+              <td data-label="免签路径">过境免签</td>
+              <td data-label="为什么不适合 ICML">适合去第三国过境；ICML 的目的地就是韩国首尔。</td>
+              <td data-label="官方入口"><a href="https://chn.mofa.go.kr/cn-zh/brd/m_1208/list.do" target="_blank" rel="noopener">韩国驻华使馆免签介绍</a></td>
             </tr>
           </tbody>
         </table>
@@ -912,6 +1145,7 @@
           <li><a href="ICML_2026_五人注册省钱方案.md">ICML_2026_五人注册省钱方案.md</a></li>
           <li><a href="ICML_2026_韩国签证办理路径.md">ICML_2026_韩国签证办理路径.md</a></li>
           <li><a href="ICML_2026_多人免签结论.md">ICML_2026_多人免签结论.md</a></li>
+          <li><a href="ICML_2026_日程与首尔济州旅行规划.md">ICML_2026_日程与首尔济州旅行规划.md</a></li>
           <li><a href="韩国签证种类及所需材料_260428.pdf">韩国签证种类及所需材料_260428.pdf</a></li>
           <li><a href="韩国签证申请及签发程序_260313.pdf">韩国签证申请及签发程序_260313.pdf</a></li>
           <li><a href="中国团体游客临时免签计划_MOJ_20250908.pdf">中国团体游客临时免签计划_MOJ_20250908.pdf</a></li>
@@ -941,6 +1175,13 @@
             <p><a href="https://overseas.mofa.go.kr/cn-zh/brd/m_23455/list.do" target="_blank" rel="noopener">签证申请程序</a></p>
             <p><a href="https://www.visaforkorea-sh.com" target="_blank" rel="noopener">上海韩国签证申请中心</a></p>
             <p><a href="https://www.visa.go.kr/openPage.do?MENU_ID=10301" target="_blank" rel="noopener">Korea Visa Portal 查询</a></p>
+          </div>
+          <div class="card">
+            <h3>首尔与济州</h3>
+            <p><a href="https://visit.seoul.kr/en/places/coex-mall" target="_blank" rel="noopener">COEX Mall & Starfield Library</a></p>
+            <p><a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=351&vcontsId=97932" target="_blank" rel="noopener">Bukchon Hanok Village</a></p>
+            <p><a href="https://www.airport.co.kr/gimpoeng/cms/frCon/index.do?MENU_ID=0200" target="_blank" rel="noopener">Gimpo Airport Flight Info</a></p>
+            <p><a href="https://www.visitjeju.net/en" target="_blank" rel="noopener">VisitJeju Official Guide</a></p>
           </div>
         </div>
       </section>
