@@ -451,6 +451,46 @@
       border-radius: 6px;
     }
 
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .media-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .media-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #e8ede8;
+    }
+
+    .media-card div {
+      padding: 12px 14px 14px;
+    }
+
+    .budget-total {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .budget-number {
+      margin: 8px 0;
+      font-size: 34px;
+      line-height: 1.05;
+      font-weight: 850;
+    }
+
     .checklist {
       columns: 2;
       column-gap: 28px;
@@ -552,8 +592,8 @@
         white-space: normal;
         line-height: 1.35;
       }
-      .price { font-size: 26px; }
-      .hero, .grid.cols-2, .grid.cols-3, .grid.cols-4, .flow {
+      .price, .budget-number { font-size: 26px; }
+      .hero, .grid.cols-2, .grid.cols-3, .grid.cols-4, .flow, .media-grid, .budget-total {
         grid-template-columns: 1fr;
       }
       .time-row {
@@ -588,6 +628,7 @@
         <a href="#seoul">首尔游玩</a>
         <a href="#jeju-route">首尔济州交通</a>
         <a href="#jeju">济州岛方案</a>
+        <a href="#travel-budget">机票酒店预算</a>
         <a href="#team">5 人注册方案</a>
         <a href="#camera">Camera-ready</a>
         <a href="#registration">注册步骤</a>
@@ -596,7 +637,7 @@
         <a href="#links">官方链接</a>
       </nav>
       <div class="side-note">
-        更新时间：2026-05-18<br>
+        更新时间：2026-05-21<br>
         5 人团队：4 名学生 + 1 名企业人士。<br>
         目标：cover 1 篇 main conference paper。
       </div>
@@ -874,6 +915,129 @@
         </div>
       </section>
 
+      <section id="travel-budget">
+        <h2>机票酒店预算</h2>
+        <p class="lead">预算按 2026-05-21 检索口径做可执行版本：默认从上海出发，5 人，7/6-7/10 住首尔 COEX / 三成 / 宣陵一带，7/10-7/12 住济州，酒店按 3 间房计算。汇率为预算换算假设：1 USD 约 6.8 CNY，1000 KRW 约 4.55 CNY。</p>
+
+        <div class="media-grid" aria-label="机票酒店视觉规划">
+          <div class="media-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Incheon_Airport.jpg" alt="Incheon Airport terminal">
+            <div>
+              <span class="badge">国际机票</span>
+              <h3>上海往返首尔</h3>
+              <p>当前公开搜索结果显示 PVG/SHA-SEL/ICN 七月往返约 $260-$350/人；有托运行李时按 $280-$350 更稳。</p>
+            </div>
+          </div>
+          <div class="media-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Starfield_Library_COEX_20240218.jpg" alt="COEX Starfield Library">
+            <div>
+              <span class="badge">会议住宿</span>
+              <h3>COEX 周边 4 晚</h3>
+              <p>COEX/Gangnam 商务酒店样本约 $88-$160/间夜；5 人建议 3 间房，省时间比跨城通勤更值。</p>
+            </div>
+          </div>
+          <div class="media-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seongsan_Ilchulbong.jpg" alt="Seongsan Ilchulbong in Jeju">
+            <div>
+              <span class="badge">济州加段</span>
+              <h3>Gimpo-Jeju + 2 晚</h3>
+              <p>国内段低价常见 $30-$60 单程；考虑行李和周五出发，建议预算 $80-$120/人往返。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="budget-total">
+          <div class="card highlight">
+            <span class="badge">推荐执行预算</span>
+            <h3>旅行部分：约 $4,300 / ¥29,000</h3>
+            <div class="budget-number">$4.3k</div>
+            <p>含国际机票、Seoul-Jeju 国内机票、首尔 4 晚、济州 2 晚、机场/岛内交通。不含餐饮、购物和个人签证杂费。</p>
+          </div>
+          <div class="card">
+            <span class="badge blue">加上 ICML 注册</span>
+            <h3>团队总成本：约 $5,700 / ¥39,000</h3>
+            <div class="budget-number">$5.7k</div>
+            <p>在上面的旅行预算基础上，加 4 名学生 + 1 名企业人士的 Conference only 早鸟注册 $1350。</p>
+          </div>
+        </div>
+
+        <table aria-label="5 人机票酒店预算拆分">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>估算口径</th>
+              <th>团队预算</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="项目">上海-首尔国际机票</td>
+              <td data-label="估算口径">$280/人 × 5</td>
+              <td data-label="团队预算">$1400 / ¥9500</td>
+              <td data-label="备注">公开搜索看到 July/round-trip 约 $263-$294 起；直飞、托运行李、周末回程建议按 $280-$350/人锁预算。</td>
+            </tr>
+            <tr>
+              <td data-label="项目">Gimpo-Jeju 国内机票</td>
+              <td data-label="估算口径">$80/人 × 5</td>
+              <td data-label="团队预算">$400 / ¥2700</td>
+              <td data-label="备注">低价 OTA 常见 $30-$60 单程；7/10 周五、托运行李和退改需求会抬高实际价格。</td>
+            </tr>
+            <tr>
+              <td data-label="项目">首尔 COEX 周边酒店</td>
+              <td data-label="估算口径">$130/间夜 × 3 间 × 4 晚</td>
+              <td data-label="团队预算">$1560 / ¥10600</td>
+              <td data-label="备注">COEX/Gangnam 可查样本约 $88-$160/间夜；建议选三成、宣陵、COEX 步行或短地铁范围。</td>
+            </tr>
+            <tr>
+              <td data-label="项目">济州酒店</td>
+              <td data-label="估算口径">$80/间夜 × 3 间 × 2 晚</td>
+              <td data-label="团队预算">$480 / ¥3300</td>
+              <td data-label="备注">济州市区/机场周边样本约 $44-$102/间夜；若主玩东线，也可住 Seongsan 一晚。</td>
+            </tr>
+            <tr>
+              <td data-label="项目">机场与岛内交通</td>
+              <td data-label="估算口径">巴士/地铁 + 济州包车或租车</td>
+              <td data-label="团队预算">$450-$600 / ¥3100-¥4100</td>
+              <td data-label="备注">Incheon-COEX 机场巴士约 KRW 17,000/人/程；济州 5 人同走建议包车或租车，2 天按 $250-$400 留预算。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="grid cols-3">
+          <div class="card">
+            <span class="badge">省钱方案</span>
+            <h3>7/6 到首尔，7/12 回国</h3>
+            <p>旅行部分约 $3.6k-$4.3k。重点是尽早锁直飞/托运行李机票，酒店用 COEX 周边可取消商务酒店。</p>
+          </div>
+          <div class="card highlight">
+            <span class="badge">推荐方案</span>
+            <h3>主会三天 + 济州两晚</h3>
+            <p>旅行部分按 $4.3k 做主预算，体验和风险比较均衡。7/10 中午飞济州，7/12 晚回首尔或直接衔接回国。</p>
+          </div>
+          <div class="card warning">
+            <span class="badge red">更稳妥</span>
+            <h3>加 1 晚首尔缓冲</h3>
+            <p>若国际航班从 Incheon 回国，建议 7/12 晚回首尔、7/13 回国。额外加 3 间房 1 晚，约 $330-$480。</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>下单顺序：</strong>先定 ICML 参会核心日期与签证材料，再锁可退改酒店；机票建议把上海-首尔和 Gimpo-Jeju 分开看。若 5 人都带大件行李，国内段一定核对托运行李额度，廉航裸票不一定真便宜。
+        </div>
+        <div class="link-row">
+          <a class="mini-link" href="https://www.trip.com/flights/shanghai-to-seoul/airfares-sha-sel/" target="_blank" rel="noopener">Trip.com Shanghai-Seoul</a>
+          <a class="mini-link" href="https://www.expedia.com/lp/flights/pvg/icn/shanghai-to-seoul" target="_blank" rel="noopener">Expedia PVG-ICN</a>
+          <a class="mini-link" href="https://www.trip.com/flights/seoul-to-jeju/airfares-sel-cju/" target="_blank" rel="noopener">Trip.com Seoul-Jeju</a>
+          <a class="mini-link" href="https://www.koreanair.com/flights/en/flights-from-seoul-to-jeju" target="_blank" rel="noopener">Korean Air Seoul-Jeju</a>
+          <a class="mini-link" href="https://www.expedia.com/COEX-Convention-And-Exhibition-Center-Hotels.0-l6080011-0.Travel-Guide-Filter-Hotels" target="_blank" rel="noopener">COEX Hotels</a>
+          <a class="mini-link" href="https://www.expedia.com/Jeju-Hotels.d850.Travel-Guide-Hotels" target="_blank" rel="noopener">Jeju Hotels</a>
+          <a class="mini-link" href="https://www.seoulairportbus.com/6006apgujeongcoex" target="_blank" rel="noopener">Airport Bus 6006</a>
+          <a class="mini-link" href="https://wise.com/us/currency-converter/usd-to-cny-rate" target="_blank" rel="noopener">USD/CNY</a>
+          <a class="mini-link" href="https://wise.com/us/currency-converter/krw-to-cny-rate" target="_blank" rel="noopener">KRW/CNY</a>
+        </div>
+      </section>
+
       <section id="team">
         <h2>5 人注册方案</h2>
         <p class="lead">你们有 4 名学生和 1 名企业人士，并且 5 人都去现场。最低合规方案是每个人只买 Conference Sessions，不买 Tutorials / Workshops。$50 的 Student Virtual Pass 只能线上访问，不能现场入场。</p>
@@ -1146,6 +1310,7 @@
           <li><a href="ICML_2026_韩国签证办理路径.md">ICML_2026_韩国签证办理路径.md</a></li>
           <li><a href="ICML_2026_多人免签结论.md">ICML_2026_多人免签结论.md</a></li>
           <li><a href="ICML_2026_日程与首尔济州旅行规划.md">ICML_2026_日程与首尔济州旅行规划.md</a></li>
+          <li><a href="ICML_2026_机票酒店预算规划.md">ICML_2026_机票酒店预算规划.md</a></li>
           <li><a href="韩国签证种类及所需材料_260428.pdf">韩国签证种类及所需材料_260428.pdf</a></li>
           <li><a href="韩国签证申请及签发程序_260313.pdf">韩国签证申请及签发程序_260313.pdf</a></li>
           <li><a href="中国团体游客临时免签计划_MOJ_20250908.pdf">中国团体游客临时免签计划_MOJ_20250908.pdf</a></li>
@@ -1183,11 +1348,18 @@
             <p><a href="https://www.airport.co.kr/gimpoeng/cms/frCon/index.do?MENU_ID=0200" target="_blank" rel="noopener">Gimpo Airport Flight Info</a></p>
             <p><a href="https://www.visitjeju.net/en" target="_blank" rel="noopener">VisitJeju Official Guide</a></p>
           </div>
+          <div class="card">
+            <h3>机票酒店</h3>
+            <p><a href="https://www.trip.com/flights/shanghai-to-seoul/airfares-sha-sel/" target="_blank" rel="noopener">Shanghai-Seoul Flight Search</a></p>
+            <p><a href="https://www.trip.com/flights/seoul-to-jeju/airfares-sel-cju/" target="_blank" rel="noopener">Seoul-Jeju Flight Search</a></p>
+            <p><a href="https://www.expedia.com/COEX-Convention-And-Exhibition-Center-Hotels.0-l6080011-0.Travel-Guide-Filter-Hotels" target="_blank" rel="noopener">COEX Hotel Search</a></p>
+            <p><a href="https://www.seoulairportbus.com/6006apgujeongcoex" target="_blank" rel="noopener">Airport Bus 6006</a></p>
+          </div>
         </div>
       </section>
 
       <footer>
-        本页用于团队内部执行参考；签证与注册规则可能更新，下单或递签前以对应官方页面的最新显示为准。
+        本页用于团队内部执行参考；签证、注册、机票与酒店价格可能更新，下单或递签前以对应官方页面的最新显示为准。
       </footer>
     </main>
   </div>
